@@ -1,6 +1,6 @@
 # Maze of Eden #
 
-**Tema:** Igra u kojoj igrač istražuje nasumično generisane lavirinte u potrazi za 'Garden of Eden' 
+**Tema:** Igra u kojoj igrač istražuje nasumično generisane lavirinte u potrazi za 'Garden of Eden'.
 
 ---
 ## Opis igre
