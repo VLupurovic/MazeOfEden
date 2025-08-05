@@ -4,9 +4,10 @@
 
 ---
 ## Opis igre
-Igrač preuzima ulogu istraživača koji je ceo život posvetio pronalaženju Rajskog vrta.
-Igra počinje bez pravila, ali svaki uspešan prolazak kroz lavirint donosi novu "Božiju zapovest",
-koja menja način igre. Nakon 3 zapovesti i četvrtog uspešnog prolaza, igrač konačno pronalazi Eden.
+- Igrač preuzima ulogu istraživača koji je ceo život posvetio pronalaženju Rajskog vrta.
+- Igra počinje bez pravila, ali svaki uspešan prolazak kroz lavirint donosi novu "Božiju zapovest",
+koja menja način igre.
+- Nakon 3 zapovesti i četvrtog uspešnog prolaza, igrač konačno pronalazi Eden.
 
 ---
 ## Funkcionalnosti
@@ -17,5 +18,5 @@ koja menja način igre. Nakon 3 zapovesti i četvrtog uspešnog prolaza, igrač 
 
 ---
 ## 
-Autor: Vukašin Lupurović
-Email: vukasin.lupurovic@gmail.com
+- Autor: Vukašin Lupurović
+- Email: vukasin.lupurovic@gmail.com
