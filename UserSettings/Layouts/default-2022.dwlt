@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 38
+  controlID: 102
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 1102
     height: 561
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -369,14 +369,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Vukasin\Desktop\MazeOfEden-master
+  m_LastProjectPath: C:\Users\Vukasin\Desktop\TwoDesperados\Game\MazeOfEden
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f46e0000
-    m_LastClickedID: 28404
-    m_ExpandedIDs: 00000000f46e0000da6f000000ca9a3bffffff7f
+    m_SelectedIDs: 185c0000
+    m_LastClickedID: 23576
+    m_ExpandedIDs: 00000000185c0000147f0000187f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -404,7 +404,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f46e0000
+    m_ExpandedIDs: 00000000185c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -544,9 +544,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 46eae3ff
-      m_LastClickedID: -1840570
-      m_ExpandedIDs: 24fbffff786e0000ae6e0000
+      m_SelectedIDs: 34ad67ff
+      m_LastClickedID: -9982668
+      m_ExpandedIDs: 304dcdff24fbffffba5b0000c45b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -939,9 +939,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.656646, y: 3.0965345, z: 7.2189584}
+    m_Target: {x: 14.025, y: 1.6049998, z: -7.75}
     speed: 2
-    m_Value: {x: 10.656646, y: 3.0965345, z: 7.2189584}
+    m_Value: {x: 14.025, y: 1.6049998, z: -7.75}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -987,13 +987,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.056698643, y: -0.4962551, z: 0.032498125, w: 0.86572355}
+    m_Target: {x: -0.00735032, y: -0.9793526, z: 0.19893272, w: -0.036218}
     speed: 2
-    m_Value: {x: 0.056698155, y: -0.49625084, z: 0.032497846, w: 0.8657161}
+    m_Value: {x: -0.007404367, y: -0.9790182, z: 0.20039439, w: -0.036205646}
   m_Size:
-    m_Target: 5.930655
+    m_Target: 3.4974358
     speed: 2
-    m_Value: 5.930655
+    m_Value: 3.4974358
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1137,7 +1137,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1920
+    x: 0
     y: 634
     width: 1465
     height: 365

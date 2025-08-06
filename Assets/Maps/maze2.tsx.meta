@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: d4d9b8a19a52c5b4b86df8d5223cec6b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  missingFiles: []
+  errors:
+  - Unknown error encountered. Please report as bug. Stack track is in the console
+    output.
+  - Failed to add object of type `SuperTile`. Check that the definition is in a file
+    of the same name and that it compiles properly.
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 13
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 0
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
