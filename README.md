@@ -12,7 +12,7 @@ koja menja način igre.
 ---
 ## Funkcionalnosti
 - First-person kontrola igrača sa mogućnošću kretanja, skakanja i trčanja.
-- Nasumilno generisan lavirint (maze)
+- Unapred generisani lavirint (maze)
 - Sistem za dobijanje i poštovanje zapovesti
 - Različiti završeci igre u zavisnosti od finalne odluke
 
