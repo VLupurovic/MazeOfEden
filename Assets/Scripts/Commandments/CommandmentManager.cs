@@ -5,13 +5,13 @@ using TMPro;
 
 public class CommandmentManager : MonoBehaviour
 {
-    public List<Commandment> allCommandments; // sve zapovesti
+    public List<Commandment> allCommandments; // All commandments
     private List<Commandment> activeCommandments = new List<Commandment>();
 
     public AudioSource audioSource;
     public TextMeshProUGUI[] commandmentTextUIs;
 
-    public int currentMazeIndex = 0; // broj mazea
+    public int currentMazeIndex = 0; // Maze number
 
 
     public void AssignNewCommandment()
@@ -20,13 +20,13 @@ public class CommandmentManager : MonoBehaviour
 
         if (currentMazeIndex == 0)
         {
-            // Prvi maze je slobodan, nema zapovesti
+            // First maze is free, no commandments
             return;
         }
 
         if (allCommandments.Count == 0)
         {
-            Debug.LogWarning("Nema više zapovesti za dodelu");
+            Debug.LogWarning("No more commandments to add");
             return;
         }
 
@@ -37,24 +37,24 @@ public class CommandmentManager : MonoBehaviour
         activeCommandments.Add(newCommandment);
 
         ShowCommandment(newCommandment);
-        Debug.Log($"Dodeljena zapovest: ID={newCommandment.id}, Tekst='{newCommandment.text}'");
+        Debug.Log($"Commandment assigned: ID={newCommandment.id}, Text='{newCommandment.text}'");
 
         PrintActiveCommandments();
 
     }
     public void PrintActiveCommandments()
     {
-        Debug.Log("Aktivne zapovesti:");
+        Debug.Log("Active commandments:");
 
         if (activeCommandments.Count == 0)
         {
-            Debug.Log("Nema aktivnih zapovesti.");
+            Debug.Log("No active commandments.");
             return;
         }
 
         foreach (var c in activeCommandments)
         {
-            Debug.Log($"ID: {c.id}, Tekst: {c.text}");
+            Debug.Log($"ID: {c.id}, Text: {c.text}");
         }
     }
 
@@ -68,15 +68,15 @@ public class CommandmentManager : MonoBehaviour
 
     private void ShowCommandment(Commandment c)
     {
-        Debug.Log($"Prikazujem zapovest na indexu {currentMazeIndex}: {c.text}");
+        Debug.Log($"Showing commandment on index {currentMazeIndex}: {c.text}");
 
         if (currentMazeIndex < commandmentTextUIs.Length && commandmentTextUIs[currentMazeIndex] != null)
         {
-            commandmentTextUIs[currentMazeIndex].text = "Nova zapovest: " + c.text;
+            commandmentTextUIs[currentMazeIndex].text = "New commandment: " + c.text;
         }
         else
         {
-            Debug.LogWarning($"Ne postoji UI tekst za currentMazeIndex={currentMazeIndex}");
+            Debug.LogWarning($"There is no UI text for currentMazeIndex={currentMazeIndex}");
         }
     }
 
@@ -94,7 +94,7 @@ public class CommandmentManager : MonoBehaviour
     public void OnEnterNewMaze()
     {
         currentMazeIndex++;
-        Debug.Log($"Ulazak u maze broj: {currentMazeIndex}");
+        Debug.Log($"Entering maze number: {currentMazeIndex}");
 
     }
 

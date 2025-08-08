@@ -6,17 +6,17 @@ public class CommandmentTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Ulazak u trigger detektovan.");
+        Debug.Log("Entering trigger detected.");
 
         if (commandmentManager == null)
         {
-            Debug.LogError("commandmentManager je NULL!");
+            Debug.LogError("commandmentManager is NULL!");
         }
         else
         {
             commandmentManager.AssignNewCommandment();
-            Debug.Log("Pozvana AssignNewCommandment()");
-            Destroy(gameObject); // da se ne ponovi
+            Debug.Log("Called AssignNewCommandment()");
+            Destroy(gameObject); // Avoiding repetition
 
         }
     }

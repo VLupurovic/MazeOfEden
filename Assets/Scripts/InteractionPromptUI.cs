@@ -15,7 +15,7 @@ public class InteractionPromptUI : MonoBehaviour
         else
             Destroy(gameObject);
 
-        Hide(); // osiguraj da je poruka skrivena na početku
+        Hide(); // Message hidden at start
     }
 
     public void Show(string message)

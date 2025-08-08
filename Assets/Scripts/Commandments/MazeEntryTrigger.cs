@@ -8,9 +8,9 @@ public class MazeEntryTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Igrac je ušao u novi maze.");
+            Debug.Log("Player entered new maze.");
             commandmentManager.OnEnterNewMaze();
-            // deaktiviram trigger da se ne ponavlja
+            // deactivating trigger so it doesnt repeat
             gameObject.SetActive(false);
         }
     }

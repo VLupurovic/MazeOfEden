@@ -17,10 +17,10 @@ public class CommandmentChecker : MonoBehaviour
             switch (c.id)
             {
                 case 1:
-                    if (Input.GetKeyDown(KeyCode.A))
+                    if (Input.GetKeyDown(KeyCode.W))
                     {
                         hasBrokenCommandment = true;
-                        Debug.Log("Zapovest prekrsena: Ne idi ulevo!");
+                        Debug.Log("Commandment failed:Dont go forward!");
                     }
                     break;
 
@@ -28,7 +28,7 @@ public class CommandmentChecker : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
                         hasBrokenCommandment = true;
-                        Debug.Log("Zapovest prekrsena: Ne skaci!");
+                        Debug.Log("Commandment failed: Dont jump!");
                     }
                     break;
 
@@ -36,7 +36,7 @@ public class CommandmentChecker : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.LeftShift))
                     {
                         hasBrokenCommandment = true;
-                        Debug.Log("Zapovest prekrsena: Ne trci!");
+                        Debug.Log("Commandment failed: Dont run!");
                     }
                     break;
 
@@ -44,7 +44,7 @@ public class CommandmentChecker : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.T))
                     {
                         hasBrokenCommandment = true;
-                        Debug.Log("Zapovest prekrsena: Ne koristi svetlost!");
+                        Debug.Log("Commandment failed: Dont use torch!");
                     }
                     break;
 
@@ -52,7 +52,7 @@ public class CommandmentChecker : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.S))
                     {
                         hasBrokenCommandment = true;
-                        Debug.Log("Zapovest prekrsena: Ne idi unazad!");
+                        Debug.Log("Commandment failed: Dont go backwards!");
                     }
                     break;
 
