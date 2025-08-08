@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Maze\KeyPickup.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\Scripts\Maze3\WallInteraction.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\ImportedAssets\Aztech Games\GemsAndCrystals\Script\Rotate.cs" />
@@ -72,8 +73,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\MouseLook.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
-    <Compile Include="Assets\Scripts\Maze3\Lever.cs" />
     <Compile Include="Assets\Scripts\Maze2\PlayerBookCollector.cs" />
+    <Compile Include="Assets\Scripts\Maze3\Lever.cs" />
     <Compile Include="Assets\Scripts\Commandments\CommandmentChecker.cs" />
     <Compile Include="Assets\ImportedAssets\Old Torch\Script\FlickLight.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
@@ -104,8 +105,10 @@
     <Compile Include="Assets\MazeNode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\InteractionPromptUI.cs" />
+    <Compile Include="Assets\Scripts\Maze3\BallController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Maze\Maze4ExitTrigger.cs" />
+    <Compile Include="Assets\Scripts\Maze3\SequenceManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\Commandments\CommandmentTrigger.cs" />

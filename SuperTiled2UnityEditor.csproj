@@ -60,8 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\ThirdParty\LibTessDotNet\MeshUtils.cs" />
-    <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Loaders\SuperObjectLayerLoader.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Importers\TmxAssetImporter.ImageLayer.cs" />
+    <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Loaders\SuperObjectLayerLoader.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\CustomEditors\SuperColliderComponentEditor.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Math\ColliderFactoryOrthogonal.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Math\ColliderFactory.cs" />
@@ -92,8 +92,8 @@
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Extensions\SuperLayerExtensions.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Postprocessors\SuperAssetDependencyPostprocessor.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Collision\Geometry\PolylineReduction.cs" />
-    <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Loaders\SuperLayerLoader.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\ThirdParty\MaxRectsBinPack.cs" />
+    <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Loaders\SuperLayerLoader.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Settings\ST2USettingsProvider.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Loaders\SuperTileLayerLoader.cs" />
     <Compile Include="Assets\ImportedAssets\SuperTiled2Unity\Scripts\Editor\Settings\ST2USettings.cs" />
