@@ -13,6 +13,13 @@ public class CommandmentManager : MonoBehaviour
 
     public int currentMazeIndex = 0; // Maze number
 
+    private List<Commandment> originalCommandments = new List<Commandment>();
+
+
+    void Start()
+    {
+        originalCommandments = new List<Commandment>(allCommandments);
+    }
 
     public void AssignNewCommandment()
     {
@@ -59,9 +66,9 @@ public class CommandmentManager : MonoBehaviour
     }
 
 
-    public void ResetCommandments(List<Commandment> originalList)
+    public void ResetCommandments()
     {
-        allCommandments = new List<Commandment>(originalList);
+        allCommandments = new List<Commandment>(originalCommandments);
         activeCommandments.Clear();
         currentMazeIndex = 0;
     }
@@ -96,6 +103,26 @@ public class CommandmentManager : MonoBehaviour
         currentMazeIndex++;
         Debug.Log($"Entering maze number: {currentMazeIndex}");
 
+    }
+
+    public void ResetActiveCommandments()
+    {
+        activeCommandments.Clear();
+    }
+
+    public void ActivateCommandmentById(int id)
+    {
+        Commandment cmd = allCommandments.Find(c => c.id == id); 
+        if (cmd != null)
+        {
+            activeCommandments.Add(cmd);
+            ShowCommandment(cmd);
+            Debug.Log($"Restored commandment: ID = {cmd.id}, Text = '{cmd.text}'");
+        }
+        else
+        {
+            Debug.LogWarning($"Commandment with ID = {id} not found in allCommandments");
+        }
     }
 
 

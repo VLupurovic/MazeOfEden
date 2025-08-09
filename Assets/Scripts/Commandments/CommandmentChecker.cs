@@ -21,6 +21,7 @@ public class CommandmentChecker : MonoBehaviour
                     {
                         hasBrokenCommandment = true;
                         Debug.Log("Commandment failed:Dont go forward!");
+                        RestartAfterDelay();
                     }
                     break;
 
@@ -29,6 +30,7 @@ public class CommandmentChecker : MonoBehaviour
                     {
                         hasBrokenCommandment = true;
                         Debug.Log("Commandment failed: Dont jump!");
+                        RestartAfterDelay();
                     }
                     break;
 
@@ -37,6 +39,7 @@ public class CommandmentChecker : MonoBehaviour
                     {
                         hasBrokenCommandment = true;
                         Debug.Log("Commandment failed: Dont run!");
+                        RestartAfterDelay();
                     }
                     break;
 
@@ -45,6 +48,7 @@ public class CommandmentChecker : MonoBehaviour
                     {
                         hasBrokenCommandment = true;
                         Debug.Log("Commandment failed: Dont use torch!");
+                        RestartAfterDelay();
                     }
                     break;
 
@@ -53,6 +57,7 @@ public class CommandmentChecker : MonoBehaviour
                     {
                         hasBrokenCommandment = true;
                         Debug.Log("Commandment failed: Dont go backwards!");
+                        RestartAfterDelay();
                     }
                     break;
 
@@ -60,4 +65,30 @@ public class CommandmentChecker : MonoBehaviour
         }
 
     }
+
+    private void RestartAfterDelay()
+    {
+        StartCoroutine(RestartCoroutine());
+    }
+
+    private IEnumerator RestartCoroutine()
+    {
+        Debug.Log("Restart incoming in 3 seconds...");
+        yield return new WaitForSeconds(3);
+
+        if (GlobalMazeManager.Instance != null)
+        {
+            GlobalMazeManager.Instance.FailCurrentMaze();
+        }
+        else
+        {
+            Debug.LogError("GlobalMazeManager instance is null!");
+        }
+    }
+
+    public void ResetBrokenFlag()
+    {
+        hasBrokenCommandment = false;
+    }
+
 }

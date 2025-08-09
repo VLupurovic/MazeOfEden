@@ -4,19 +4,29 @@ public class CommandmentTrigger : MonoBehaviour
 {
     public CommandmentManager commandmentManager;
 
+    private bool triggered = false;
+
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entering trigger detected.");
+        if (triggered) return; // to avoid repetition
 
-        if (commandmentManager == null)
+        if (other.CompareTag("Player"))
         {
-            Debug.LogError("commandmentManager is NULL!");
-        }
-        else
-        {
-            commandmentManager.AssignNewCommandment();
-            Debug.Log("Called AssignNewCommandment()");
-            Destroy(gameObject); // Avoiding repetition
+            triggered = true;
+
+            Debug.Log("Entering trigger detected");
+
+            if (GlobalMazeManager.Instance != null)
+            {
+                GlobalMazeManager.Instance.CompleteMaze();
+                Debug.Log("Called CompleteMaze()");
+            }
+            else
+            {
+                Debug.LogError("GlobalMazeManager instance is NULL!");
+            }
+
+            Destroy(gameObject);
 
         }
     }

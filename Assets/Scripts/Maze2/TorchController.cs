@@ -2,7 +2,7 @@
 
 public class TorchController : MonoBehaviour
 {
-    public GameObject torchLight; // torch light - dete playera
+    public GameObject torchLight; // torch light - players child
 
     private bool hasTorch = false;
     private bool torchOn = false;
@@ -10,7 +10,7 @@ public class TorchController : MonoBehaviour
     void Start()
     {
         if (torchLight != null)
-            torchLight.SetActive(false);  // na početku torch svetlo isključeno
+            torchLight.SetActive(false);  // torch light off at the start
     }
 
     void Update()

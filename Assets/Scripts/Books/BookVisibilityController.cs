@@ -21,4 +21,11 @@ public class BookVisibility : MonoBehaviour
         // Book visible only when torch is on
         bookRenderer.enabled = torchController.IsTorchOn;
     }
+
+    public bool IsVisible()
+    {
+        bool visible = bookRenderer != null & bookRenderer.enabled;
+        Debug.Log($"BookVisibility.IsVisible() = {visible}");
+        return visible;
+    }
 }

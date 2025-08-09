@@ -21,6 +21,6 @@ public class PlayerBookCollector : MonoBehaviour
     public void CollectBook()
     {
         collectedBooks++;
-        Debug.Log("Broj pokupjenih knjiga: " + collectedBooks);
+        Debug.Log("Number of collected books: " + collectedBooks);
     }
 }

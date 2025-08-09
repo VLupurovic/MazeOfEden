@@ -6,7 +6,7 @@ public class EndZoneTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        // Proverava da li je objekat sa tagom Player
+        // Checking if object is with Player tag
         if (other.CompareTag("Player"))
         {
             Debug.Log("You found the end!");

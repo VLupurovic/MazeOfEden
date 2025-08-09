@@ -8,17 +8,17 @@ public class PickupTorch : MonoBehaviour
     {
         if (playerNearby && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Pritisnut E kod torcha");
+            Debug.Log("Pressed E near torch.");
             TorchController torchController = FindObjectOfType<TorchController>();
             if (torchController != null)
             {
-                Debug.Log("TorchController pronađen");
+                Debug.Log("TorchController found.");
                 torchController.PickupTorch();
                 Destroy(gameObject);
             }
             else
             {
-                Debug.LogWarning("TorchController nije pronađen!");
+                Debug.LogWarning("TorchController not found!");
             }
         }
     }
@@ -28,7 +28,7 @@ public class PickupTorch : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = true;
-            Debug.Log("Igrac u blizini torcha");
+            Debug.Log("Player entered torch area.");
         }
     }
 
@@ -37,7 +37,7 @@ public class PickupTorch : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = false;
-            Debug.Log("Igrac je napustio oblast torcha");
+            Debug.Log("Player has left torch area.");
         }
     }
 
