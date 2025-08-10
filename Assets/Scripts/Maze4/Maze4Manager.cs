@@ -5,6 +5,9 @@ using TMPro;
 
 public class Maze4Manager : MonoBehaviour
 {
+    public static Maze4Manager Instance { get; private set; }
+
+
     public float timerDuration = 180f;
     private float timer;
     private bool timerRunning = false;
@@ -37,8 +40,21 @@ public class Maze4Manager : MonoBehaviour
         if (player == null)
             player = GameObject.FindGameObjectWithTag("Player");
 
+        timerText.gameObject.SetActive(false);
         UpdateTimerUI();
 
+    }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // protection from duplicates
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     void Update()
@@ -62,6 +78,11 @@ public class Maze4Manager : MonoBehaviour
     {
         keysCollected++;
         Debug.Log("Key collected. Currently: " + keysCollected);
+    }
+
+    public int GetKeysCount()
+    {
+        return keysCollected;
     }
 
     private void CacheItems()
@@ -178,6 +199,7 @@ public class Maze4Manager : MonoBehaviour
     {
         timer = timerDuration;
         timerRunning = true;
+        timerText.gameObject.SetActive(true);
         UpdateTimerUI();
     }
 

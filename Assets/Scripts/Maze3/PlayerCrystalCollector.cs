@@ -10,7 +10,7 @@ public class PlayerCrystalCollector : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject); // zaštita od duplikata
+            Destroy(gameObject); // protection from duplicates
         }
         else
         {
@@ -21,14 +21,7 @@ public class PlayerCrystalCollector : MonoBehaviour
     public void CollectCrystal()
     {
         crystalCount++;
-        Debug.Log("Pokupio kristal! Ukupno: " + crystalCount);
-
-        //// Ako treba da proveriš da li su sva 3 kristala pokupljena:
-        //if (crystalCount >= 3)
-        //{
-        //    Debug.Log("Svi kristali su pokupljeni!");
-        //    // Ovde možeš obavestiti vrata, commandmentManager, itd.
-        //}
+        Debug.Log("Crystal collected! Total: " + crystalCount);
     }
 
     public int GetCrystalCount()

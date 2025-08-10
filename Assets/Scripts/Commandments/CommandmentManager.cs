@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -73,19 +73,22 @@ public class CommandmentManager : MonoBehaviour
         currentMazeIndex = 0;
     }
 
-    private void ShowCommandment(Commandment c)
-    {
-        Debug.Log($"Showing commandment on index {currentMazeIndex}: {c.text}");
+   private void ShowCommandment(Commandment c)
+{
+    Debug.Log($"Showing commandment on index {currentMazeIndex}: {c.text}");
 
-        if (currentMazeIndex < commandmentTextUIs.Length && commandmentTextUIs[currentMazeIndex] != null)
-        {
-            commandmentTextUIs[currentMazeIndex].text = "New commandment: " + c.text;
-        }
-        else
-        {
-            Debug.LogWarning($"There is no UI text for currentMazeIndex={currentMazeIndex}");
-        }
+    if (currentMazeIndex < commandmentTextUIs.Length && commandmentTextUIs[currentMazeIndex] != null)
+    {
+        var uiText = commandmentTextUIs[currentMazeIndex];
+        uiText.gameObject.SetActive(true);  // Aktiviraj da sigurno bude vidljiv
+        uiText.text = "New commandment: " + c.text;
     }
+    else
+    {
+        Debug.LogWarning($"There is no UI text for currentMazeIndex={currentMazeIndex}");
+    }
+}
+
 
 
     public bool IsCommandmentActive(int id)
@@ -103,6 +106,11 @@ public class CommandmentManager : MonoBehaviour
         currentMazeIndex++;
         Debug.Log($"Entering maze number: {currentMazeIndex}");
 
+        if (activeCommandments.Count > 0)
+        {
+            Commandment lastCmd = activeCommandments[activeCommandments.Count - 1];
+            ShowCommandment(lastCmd);
+        }
     }
 
     public void ResetActiveCommandments()
@@ -116,6 +124,7 @@ public class CommandmentManager : MonoBehaviour
         if (cmd != null)
         {
             activeCommandments.Add(cmd);
+            allCommandments.Remove(cmd);
             ShowCommandment(cmd);
             Debug.Log($"Restored commandment: ID = {cmd.id}, Text = '{cmd.text}'");
         }
@@ -123,6 +132,11 @@ public class CommandmentManager : MonoBehaviour
         {
             Debug.LogWarning($"Commandment with ID = {id} not found in allCommandments");
         }
+    }
+
+    public int GetCurrentMazeIndex()
+    {
+        return currentMazeIndex;
     }
 
 

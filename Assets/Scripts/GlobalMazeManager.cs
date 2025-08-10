@@ -18,7 +18,7 @@ public class GlobalMazeManager : MonoBehaviour
     [Header("Progress Tracking")]
     // track how many commandments and tunnels
     // when you enter new tunnel you get new commandment, so that means tunnelNumber == commandmentNumber
-    // end if you fail with 2 commandments, you respawn at tunnelNumber 2
+    // and if you fail with 2 commandments, you respawn at tunnelNumber 2
     public int commandmentsNumber = 0;
     public int tunnelNumber = 0;
 
@@ -62,10 +62,25 @@ public class GlobalMazeManager : MonoBehaviour
         commandmentsNumber++;
 
         commandmentManager.currentMazeIndex = tunnelNumber;
-        commandmentManager.AssignNewCommandment();
+        //commandmentManager.AssignNewCommandment();
 
         Debug.Log($"Maze completed! Now tunnel = {tunnelNumber}, commandments = {commandmentsNumber}");
     }
+
+    public void OnPlayerEnterTunnel(int tunnelIndex)
+    {
+        // Postavi tunnelNumber na tunnelIndex (ili +1 ako ti treba 1-based indeks)
+        tunnelNumber = tunnelIndex;
+
+        // Postavi currentMazeIndex u CommandmentManager na tunnelNumber
+        commandmentManager.currentMazeIndex = tunnelNumber;
+
+        // Dodeli novi commandment
+        commandmentManager.AssignNewCommandment();
+
+        Debug.Log($"Player entered tunnel {tunnelIndex}, assigned commandment for mazeIndex {tunnelNumber}");
+    }
+
 
     // called when maze is failed/commandment is broken
     public void FailCurrentMaze()

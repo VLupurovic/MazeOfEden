@@ -2,15 +2,18 @@
 
 public class MazeFromImage : MonoBehaviour
 {
-    public Texture2D mazeTexture; // slika lavirinta
-    public GameObject wallPrefab; // prefab zida
-    public GameObject floorPrefab; // prefab poda
+    public Texture2D mazeTexture; // maze picture
+    public GameObject wallPrefab; // wall prefab
+    public GameObject floorPrefab; // floor prefab
 
-    private float cellSize = 0.1f; // kolika je celija lavirinta
+    private float cellSize = 0.1f; // size of maze cell
+
+    public Material wallMaterial;
+
 
     void Start()
     {
-        // pozicija poda
+        // floor position
         Vector3 floorPos = new Vector3(
             (mazeTexture.width * cellSize) / 2f - cellSize / 2f,
             0,
@@ -32,11 +35,11 @@ public class MazeFromImage : MonoBehaviour
 
     void GenerateMaze()
     {
-        float wallHeight = 2.5f;  // visina zida
-        float wallHeightOffset = wallHeight / 2f;  // polovina visine
+        float wallHeight = 1.5f;  // wall Height
+        float wallHeightOffset = wallHeight / 2f;  // half of the height
 
-        // prolazak kroz piksele slike
-        // ako je piksel crn, dodajemo zid
+        // we go through image pixels
+        // if the pixel == black we add wall there
         for (int x = 0; x < mazeTexture.width; x++)
         {
             for (int y = 0; y < mazeTexture.height; y++)
@@ -47,18 +50,27 @@ public class MazeFromImage : MonoBehaviour
                 {
                     Vector3 position = new Vector3(
                     x * cellSize,
-                    0 + wallHeightOffset, 
+                    wallHeightOffset, 
                     y * cellSize);
 
-                    GameObject wall = Instantiate(wallPrefab, position, Quaternion.identity, transform);
+                    GameObject wall = Instantiate(wallPrefab, position, Quaternion.Euler(0, 90f, 0), transform);
                     wall.transform.localScale = new Vector3(cellSize, 3f, cellSize);
+                    //wall.tag = "Wall"; // adding this so that i can implement commandment
+
+                    if (wallMaterial != null)
+                    {
+                        MeshRenderer mr = wall.GetComponent<MeshRenderer>();
+                        if (mr != null)
+                            mr.material = wallMaterial;
+                    }
+
                 }
             }
         }
     }
 
-    // imao problema sa fpsom i rotacijom misa pre dodavanja ove funkcije
-    // dodao mesh collider, da igrac ne bi prolazio kroz zidove
+    // had problems with fps and mouse rotation before adding this function
+    // added mesh collider, so that the player doesnt go through walls
     void CombineWalls()
     {
         MeshFilter[] meshFilters = GetComponentsInChildren<MeshFilter>();
@@ -87,7 +99,7 @@ public class MazeFromImage : MonoBehaviour
 
         mr.material = wallPrefab.GetComponent<MeshRenderer>().sharedMaterial;
 
-        // unistavam sve child objekte koji su sada spojeni u jedan mesh
+        // destroying all child objecst that are now in one mash
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);

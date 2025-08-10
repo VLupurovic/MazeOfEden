@@ -8,13 +8,13 @@ public class PlayerBookCollector : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
+        if (Instance != null)
         {
-            Instance = this;
+            Destroy(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Instance = this;
         }
     }
 
@@ -22,5 +22,10 @@ public class PlayerBookCollector : MonoBehaviour
     {
         collectedBooks++;
         Debug.Log("Number of collected books: " + collectedBooks);
+    }
+
+    public int GetBookCount()
+    {
+        return collectedBooks;
     }
 }
