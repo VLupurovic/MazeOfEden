@@ -13,6 +13,7 @@ public class MazeFromImage : MonoBehaviour
 
     void Start()
     {
+       
         // floor position
         Vector3 floorPos = new Vector3(
             (mazeTexture.width * cellSize) / 2f - cellSize / 2f,

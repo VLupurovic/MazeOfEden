@@ -10,7 +10,7 @@ public class WallInteraction : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Player pressed E on the wall, starting sequence.");
-            GetComponent<MoveDownUp>().PlayMoveDownUp();
+            GetComponent<AnimationMoveDownUp>().PlayMoveDownUp();
             StartCoroutine(StartSequenceWithDelay(1f));
         }
     }
