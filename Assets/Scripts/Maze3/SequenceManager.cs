@@ -13,9 +13,9 @@ public class SequenceManager : MonoBehaviour
     }
 
     public GameObject wall;
-    
+
     public List<Level> levels;
-  
+
     //public GameObject wall;
     public float lightDuration = 0.5f;
     public float delayBetween = 1f;
@@ -25,6 +25,7 @@ public class SequenceManager : MonoBehaviour
     private int currentStep = 0;
 
     private bool sequenceCompleted = false;
+    private bool gameInProgress = false;
 
 
     // sequence feedback
@@ -33,7 +34,7 @@ public class SequenceManager : MonoBehaviour
     public float feedbackDuration = 2f;
 
     // making sure that player can't press balls before sequences finish
-    private bool canPressBalls = false; 
+    private bool canPressBalls = false;
 
     void Start()
     {
@@ -51,8 +52,8 @@ public class SequenceManager : MonoBehaviour
 
     public void StartGame()
     {
-        canPressBalls = false;
-        currentLevelIndex = 0;
+        StopAllCoroutines(); // Stop any running coroutines from previous game/levels
+        InitGame();
         SetupLevel(currentLevelIndex);
     }
 
@@ -63,7 +64,7 @@ public class SequenceManager : MonoBehaviour
         currentStep = 0;
 
         Level level = levels[levelIndex];
-    
+
         foreach (var ball in level.balls)
         {
             ball.sequenceManager = this;
@@ -78,7 +79,15 @@ public class SequenceManager : MonoBehaviour
     {
         canPressBalls = false;
         StopAllCoroutines();
-        StartCoroutine(PlaySequenceWithDelay(3f));
+        StartCoroutine(PlaySequenceWithDelay(1f));
+    }
+
+    public void InitGame()
+    {
+        currentLevelIndex = 0;
+        currentStep = 0;
+        sequenceCompleted = false;
+        canPressBalls = false;
     }
 
     private IEnumerator PlaySequenceWithDelay(float delay)
@@ -94,11 +103,11 @@ public class SequenceManager : MonoBehaviour
             yield break;
 
         Debug.Log($"Level {currentLevelIndex + 1} - Sequence started");
-        
+
         Debug.Log("Sequence started");
         yield return new WaitForSeconds(2f); // small pause before start
 
-        Level level = levels[currentLevelIndex];    
+        Level level = levels[currentLevelIndex];
 
         foreach (int id in level.sequence)
         {
@@ -149,16 +158,13 @@ public class SequenceManager : MonoBehaviour
 
                 StartCoroutine(WaitAndStartNextLevel(2f));
 
-                
-
             }
         }
         else
         {
-            Debug.Log("Wrong! Reseting sequence!");
-            ShowFeedback("Wrong! Reseting sequence!");
-            StartCoroutine(PlaySequence());
-            currentStep = 0;
+
+            Debug.Log("Wrong! You need to start again!");
+            ShowFeedback("Wrong! You need to start again!");
         }
     }
 
@@ -215,3 +221,6 @@ public class SequenceManager : MonoBehaviour
         return canPressBalls;
     }
 }
+
+
+

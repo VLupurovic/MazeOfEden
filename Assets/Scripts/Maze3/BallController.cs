@@ -12,15 +12,17 @@ public class BallController : MonoBehaviour
 
     public Light pointLight; // reference to Point Light component (optional)
 
-    private Color originalColor;
-    public Color highlightColor = Color.yellow;
+    public Color originalColor;
+    public Color litColor;
+
     public float highlightDuration = 0.7f;
     private Coroutine highlightCoroutine;
 
     void Start()
     {
         Renderer rend = GetComponent<Renderer>();
-        originalColor = rend.material.color;
+        //originalColor = Color.white;
+        rend.material.color = originalColor;
     }
 
     void Update()
@@ -65,18 +67,21 @@ public class BallController : MonoBehaviour
         isLit = true;
 
         Renderer rend = GetComponent<Renderer>();
-        Color original = rend.material.color;
-        rend.material.color = Color.yellow;
+        //Color original = rend.material.color;
+        //rend.material.color = Color.yellow;
+        rend.material.color = litColor;
+
 
         if (pointLight != null)
         {
             Debug.Log("Enabling point light");
+            pointLight.color = litColor;
             pointLight.enabled = true;
         }
 
         yield return new WaitForSeconds(duration);
 
-        rend.material.color = original;
+        rend.material.color = originalColor;
 
         if (pointLight != null)
         {
@@ -91,7 +96,7 @@ public class BallController : MonoBehaviour
     {
         StopAllCoroutines();
         Renderer rend = GetComponent<Renderer>();
-        rend.material.color = Color.yellow;
+        rend.material.color = litColor;
         isLit = true;
     }
 
@@ -107,7 +112,7 @@ public class BallController : MonoBehaviour
     {
         Renderer rend = GetComponent<Renderer>();
 
-        rend.material.color = highlightColor;
+        rend.material.color = litColor;
         yield return new WaitForSeconds(highlightDuration);
         rend.material.color = originalColor;
 

@@ -3,8 +3,8 @@ using TMPro;
 
 public class RioInteraction : MonoBehaviour
 {
-    public TextMeshProUGUI worldText; // TextMeshPro 3D text iznad lika
-    public GameObject bookUI;     // UI panel sa knjigom, setovan u inspectoru
+    public TextMeshProUGUI worldText;
+    public GameObject bookUI;     
 
     private bool playerInRange = false;
 

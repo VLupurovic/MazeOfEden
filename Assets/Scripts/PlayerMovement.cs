@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprint = 2f;
 
     private Rigidbody rb;
-    public Transform head; // First-Person (kamera and rotation)
+    public Transform head; // First-Person (camera and rotation)
     public Camera playerCamera; // Player camera
 
     public Transform groundCheck;

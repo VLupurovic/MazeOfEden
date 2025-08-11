@@ -9,17 +9,17 @@ public class HiddenEndingTeleport : MonoBehaviour
     public Transform spawnPoint;
     public GameObject player;
 
-    public GameObject wallObject;         // Ceo zid (root GameObject)
-    public GameObject canvasObject;       // Canvas koji je child zida
-    public TextMeshProUGUI messageText;   // TMP tekst komponenta u canvasu
-    public string message = "Dobrodošao u Eden!";
+    public GameObject wallObject;        
+    public GameObject canvasObject;      
+    public TextMeshProUGUI messageText;  
+    public string message = "Welcome to Eden!";
 
     private bool playerInRange = false;
     private bool messageShown = false;
 
     void Start()
     {
-        // Sakrij zid i UI na početku
+        
         if (wallObject != null)
             wallObject.SetActive(false);
 
@@ -31,7 +31,7 @@ public class HiddenEndingTeleport : MonoBehaviour
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Teleportujem igrača...");
+            Debug.Log("Teleporting player...");
             TeleportPlayer();
             ShowWallAndMessage();
         }
@@ -43,8 +43,8 @@ public class HiddenEndingTeleport : MonoBehaviour
         player.transform.rotation = spawnPoint.rotation;
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
-        Debug.Log("Scena je resetovana.");
-        Debug.Log("Igrač teleportovan na spawn.");
+        Debug.Log("Scene reset.");
+        Debug.Log("Player teleported to spawn.");
     }
 
     void ShowWallAndMessage()
@@ -57,7 +57,7 @@ public class HiddenEndingTeleport : MonoBehaviour
             messageText.text = message;
             canvasObject.SetActive(true);
             messageShown = true;
-            Debug.Log("Poruka prikazana.");
+            Debug.Log("Message shown.");
 
             StartCoroutine(HideMessageAfterDelay(5f));
         }
@@ -71,7 +71,7 @@ public class HiddenEndingTeleport : MonoBehaviour
             canvasObject.SetActive(false);
 
         messageShown = false;
-        Debug.Log("Poruka sakrivena.");
+        Debug.Log("Message hidden.");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -79,7 +79,7 @@ public class HiddenEndingTeleport : MonoBehaviour
         if (other.gameObject == player)
         {
             playerInRange = true;
-            Debug.Log("Igrač ušao u trigger zonu.");
+            Debug.Log("Player entered trigger zone.");
         }
     }
 
@@ -88,7 +88,7 @@ public class HiddenEndingTeleport : MonoBehaviour
         if (other.gameObject == player)
         {
             playerInRange = false;
-            Debug.Log("Igrač izašao iz trigger zone.");
+            Debug.Log("Player left trigger zone.");
         }
     }
 }

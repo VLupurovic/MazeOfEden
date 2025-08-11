@@ -101,15 +101,15 @@ public class Maze4Manager : MonoBehaviour
 
     public void TryExitMaze()
     {
-        if (keysCollected >= totalKeysRequired && timer > 0f)
+        if (keysCollected == totalKeysRequired)
         {
             Debug.Log("You have successfully finished the maze!");
             timerRunning = false;
         }
         else
         {
-            Debug.Log("You have failed! Restart!");
-            FailMaze();
+            Debug.Log("Don't have enough keys!");
+            
         }
     }
     // changed fail maze teleport code, because previous one didn't always teleport me after fail

@@ -3,15 +3,20 @@ using TMPro;
 
 public class LifeTreeEnding : MonoBehaviour
 {
-    public GameObject messageUI;          // UI Canvas za poruke
-    public TextMeshProUGUI messageText;  // TextMeshPro komponenta za tekst
+    public GameObject messageUI;          
+    public TextMeshProUGUI messageText;  
+
+    private PlayerMovement playerMovement;
 
     private bool playerInRange = false;
 
     void Start()
     {
         if (messageUI != null)
-            messageUI.SetActive(false);  // sakrij poruku na početku
+            messageUI.SetActive(false);  
+
+        if (playerMovement == null && GameObject.FindWithTag("Player") != null)
+            playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     void Update()
@@ -28,6 +33,9 @@ public class LifeTreeEnding : MonoBehaviour
         {
             messageText.text = "You have been welcomed to Eden.";
             messageUI.SetActive(true);
+
+            if (playerMovement != null)
+                playerMovement.enabled = false;
         }
     }
 

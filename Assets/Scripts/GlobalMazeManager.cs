@@ -6,6 +6,9 @@ public class GlobalMazeManager : MonoBehaviour
 {
     public static GlobalMazeManager Instance;
 
+    [Header("Audio")]
+    public MazeMusicManager musicManager;
+
     [Header("Player and Teleports")]
     public GameObject player;
     public Transform[] tunnelSpawnPoints; // if player fails, respawn them at previous tunnel
@@ -25,6 +28,7 @@ public class GlobalMazeManager : MonoBehaviour
     private List<int> savedActiveDommandmentIDs = new List<int>();
     private CommandmentChecker commandmentChecker;
 
+
     private void Awake()
     {
         if (Instance == null)
@@ -35,6 +39,14 @@ public class GlobalMazeManager : MonoBehaviour
         if (commandmentChecker == null)
             commandmentChecker = FindObjectOfType<CommandmentChecker>();
     }
+
+    void Start()
+    {
+        // play music for current tunnel and maze
+        if (musicManager != null)
+            musicManager.PlayMusicForTunnel(tunnelNumber);
+    }
+
 
     private void SaveActiveCommandments()
     {
@@ -69,16 +81,25 @@ public class GlobalMazeManager : MonoBehaviour
 
     public void OnPlayerEnterTunnel(int tunnelIndex)
     {
-        // Postavi tunnelNumber na tunnelIndex (ili +1 ako ti treba 1-based indeks)
         tunnelNumber = tunnelIndex;
 
-        // Postavi currentMazeIndex u CommandmentManager na tunnelNumber
-        commandmentManager.currentMazeIndex = tunnelNumber;
+        if (musicManager != null)
+            musicManager.PlayMusicForTunnel(tunnelNumber);
 
-        // Dodeli novi commandment
-        commandmentManager.AssignNewCommandment();
+        if (tunnelNumber <= 3)
+        {
+            commandmentManager.currentMazeIndex = tunnelNumber;
 
-        Debug.Log($"Player entered tunnel {tunnelIndex}, assigned commandment for mazeIndex {tunnelNumber}");
+            commandmentManager.AssignNewCommandment();
+
+            Debug.Log($"Player entered tunnel {tunnelIndex}, assigned commandment for mazeIndex {tunnelNumber}");
+
+        }
+        else
+        {
+            Debug.Log($"Player entered tunnel {tunnelIndex}, assigned commandment for mazeIndex {tunnelNumber}");
+
+        }
     }
 
 

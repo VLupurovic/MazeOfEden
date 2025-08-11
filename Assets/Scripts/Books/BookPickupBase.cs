@@ -9,18 +9,25 @@ public class BookPickupBase : MonoBehaviour
         if (isPickedUp)
             return false;
 
-        if (!other.CompareTag("Player"))
-            return false;
-
         return true;
     }
+
+    protected virtual void pickUp()
+    {
+        Debug.Log("Book picked up!");
+        isPickedUp = true;
+        PlayerBookCollector.Instance.CollectBook();
+        Destroy(gameObject);
+    }
+
     void OnTriggerEnter(Collider other)
     {
+        if (!other.CompareTag("Player"))
+            return;
+
         if (canBePicked())
         {
-            isPickedUp = true;
-            PlayerBookCollector.Instance.CollectBook();
-            Destroy(gameObject);
+            pickUp();
         }
     }
 }
