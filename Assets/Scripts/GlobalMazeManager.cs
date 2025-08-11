@@ -94,7 +94,7 @@ public class GlobalMazeManager : MonoBehaviour
 
         if (commandmentsNumber > 0 && commandmentsNumber <= tunnelSpawnPoints.Length)
         {
-            player.transform.position = tunnelSpawnPoints[commandmentsNumber - 1].position;
+            player.transform.position = tunnelSpawnPoints[commandmentsNumber - 1].position; // mozda tunnelNumber
         }
         else
         {

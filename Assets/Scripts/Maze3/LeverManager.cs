@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LeverManager : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class LeverManager : MonoBehaviour
     private bool isWallLowered = false;
     private Vector3 wallStartPos;
     private Vector3 wallTargetPos;
+
+    public TextMeshProUGUI feedbackText;
+    public AudioSource feedbackSound;
+    public float feedbackDuration = 2f;
+
 
     void Start()
     {
@@ -34,19 +40,44 @@ public class LeverManager : MonoBehaviour
 
         if (!IsSequenceCorrectSoFar())
         {
+            ShowFeedback("Wrong order! Combination reset!");
             Debug.Log("Wrong order! Combination reset!.");
             playerSequence.Clear();
             return;
         }
 
         Debug.Log($"Order entered: {string.Join(",", playerSequence)}");
+        ShowFeedback("Pressed lever: " + leverID);
 
         if (playerSequence.Count == correctSequence.Count)
         {
+            ShowFeedback("Correct combination! Lowering the wall!");
             Debug.Log("Correct combination! Lowering the wall.");
             StartCoroutine(LowerWall());
             isWallLowered = true;
         }
+    }
+
+    private void ShowFeedback(string message)
+    {
+
+        if (feedbackText != null)
+        {
+            feedbackText.text = message;
+            feedbackText.gameObject.SetActive(true);
+
+            if (feedbackSound != null)
+                feedbackSound.Play();
+
+            CancelInvoke(nameof(HideFeedback));
+            Invoke(nameof(HideFeedback), feedbackDuration);
+        }
+    }
+
+    private void HideFeedback()
+    {
+        if (feedbackText != null)
+            feedbackText.gameObject.SetActive(false);
     }
 
     private bool IsSequenceCorrectSoFar()

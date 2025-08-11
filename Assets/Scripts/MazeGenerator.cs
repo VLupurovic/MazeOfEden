@@ -35,7 +35,7 @@ public class MazeFromImage : MonoBehaviour
 
     void GenerateMaze()
     {
-        float wallHeight = 1.5f;  // wall Height
+        float wallHeight = 2.0f;  // wall Height
         float wallHeightOffset = wallHeight / 2f;  // half of the height
 
         // we go through image pixels

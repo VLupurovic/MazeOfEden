@@ -12,11 +12,31 @@ public class BallController : MonoBehaviour
 
     public Light pointLight; // reference to Point Light component (optional)
 
+    private Color originalColor;
+    public Color highlightColor = Color.yellow;
+    public float highlightDuration = 0.7f;
+    private Coroutine highlightCoroutine;
+
+    void Start()
+    {
+        Renderer rend = GetComponent<Renderer>();
+        originalColor = rend.material.color;
+    }
+
     void Update()
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E) && !isLit)
         {
-            sequenceManager.RegisterBallPress(ballID);
+            if (sequenceManager != null && sequenceManager.CanPressBalls())
+            {
+                Highlight(); 
+                sequenceManager.RegisterBallPress(ballID);
+            }
+            else
+            {
+                Debug.Log("Can't press balls right now!");
+            }
+
         }
     }
 
@@ -73,6 +93,33 @@ public class BallController : MonoBehaviour
         Renderer rend = GetComponent<Renderer>();
         rend.material.color = Color.yellow;
         isLit = true;
+    }
+
+    public void Highlight()
+    {
+        if (highlightCoroutine != null)
+            StopCoroutine(highlightCoroutine);
+
+        highlightCoroutine = StartCoroutine(HighlightCoroutine());
+    }
+
+    private IEnumerator HighlightCoroutine()
+    {
+        Renderer rend = GetComponent<Renderer>();
+
+        rend.material.color = highlightColor;
+        yield return new WaitForSeconds(highlightDuration);
+        rend.material.color = originalColor;
+
+
+        highlightCoroutine = null;
+    }
+
+    public void ResetColor()
+    {
+        Renderer rend = GetComponent<Renderer>();
+        rend.material.color = originalColor;
+        isLit = false;
     }
 
 }

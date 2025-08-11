@@ -2,22 +2,22 @@
 
 public class TunnelTrigger : MonoBehaviour
 {
-    public int tunnelIndex; // postavi u inspector
+    public int tunnelIndex; 
     private bool triggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (triggered) return; // već aktivirano, preskoči
+        if (triggered) return;
 
         if (other.CompareTag("Player"))
         {
-            triggered = true; // označi da je aktivirano
+            triggered = true; 
             GlobalMazeManager.Instance.OnPlayerEnterTunnel(tunnelIndex);
             Debug.Log($"Tunnel {tunnelIndex} triggered.");
         }
     }
 
-    // Ako želiš da resetuješ trigger (npr. prilikom restartovanja igre)
+    // resetting trigger (when resseting the game)
     public void ResetTrigger()
     {
         triggered = false;
