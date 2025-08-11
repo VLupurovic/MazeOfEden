@@ -8,6 +8,8 @@ public class KeyPickup : MonoBehaviour
 
     private bool isPickedUp = false;
 
+    public AudioSource audioSource;
+
     void OnTriggerEnter(Collider other)
     {
         if (isPickedUp)
@@ -16,9 +18,24 @@ public class KeyPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPickedUp = true;
-            gameObject.SetActive(false);
+            if (audioSource != null)
+            {
+                audioSource.Play();
+                StartCoroutine(DestroyAfterSound());
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
+        
             mazeManager.CollectKey();
         }
+    }
+
+    private System.Collections.IEnumerator DestroyAfterSound()
+    {
+        yield return new WaitForSeconds(audioSource.clip.length);
+        gameObject.SetActive(false);
     }
 
     public void ResetPickup()

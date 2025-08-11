@@ -1,12 +1,162 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze4\\KeyPickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Maze4\\KeyPickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickupBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Books\\BookPickupBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze3\\CrystalPickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Maze3\\CrystalPickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze3\\SequenceManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Maze3\\SequenceManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze3\\LeverInteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Maze3\\LeverInteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickupTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Books\\BookPickupTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Books\\BookPickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickupTorch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Books\\BookPickupTorch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KeyPickup.cs",
+              "DocumentMoniker": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze4\\KeyPickup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Maze4\\KeyPickup.cs",
+              "ToolTip": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze4\\KeyPickup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Maze4\\KeyPickup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T17:50:40.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CrystalPickup.cs",
+              "DocumentMoniker": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze3\\CrystalPickup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Maze3\\CrystalPickup.cs",
+              "ToolTip": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze3\\CrystalPickup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Maze3\\CrystalPickup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T17:47:02.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LeverInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze3\\LeverInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Maze3\\LeverInteraction.cs",
+              "ToolTip": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze3\\LeverInteraction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Maze3\\LeverInteraction.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwCEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T17:41:22.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SequenceManager.cs",
+              "DocumentMoniker": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze3\\SequenceManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Maze3\\SequenceManager.cs",
+              "ToolTip": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Maze3\\SequenceManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Maze3\\SequenceManager.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAmwGMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T17:34:47.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookPickupTorch.cs",
+              "DocumentMoniker": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickupTorch.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Books\\BookPickupTorch.cs",
+              "ToolTip": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickupTorch.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Books\\BookPickupTorch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T17:27:59.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookPickup.cs",
+              "DocumentMoniker": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Books\\BookPickup.cs",
+              "ToolTip": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Books\\BookPickup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T17:27:04.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookPickupTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickupTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Books\\BookPickupTrigger.cs",
+              "ToolTip": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickupTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Books\\BookPickupTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T17:25:38.521Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookPickupBase.cs",
+              "DocumentMoniker": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickupBase.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Books\\BookPickupBase.cs",
+              "ToolTip": "C:\\Users\\Vukasin\\Desktop\\TwoDesperados\\Game\\MazeOfEden\\Assets\\Scripts\\Books\\BookPickupBase.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Books\\BookPickupBase.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T17:25:21.309Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
